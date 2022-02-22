@@ -1,0 +1,279 @@
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: lightgray;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/*navbar e logo*/
+#navbar{
+    display: flex;
+    background-color: #2F7EE6;
+    width: 100vw;
+    height: 50px;
+    justify-content: space-between;
+}
+
+#navbar h1{
+    display: block;
+    margin-left: 50px;
+}
+
+#navbar a{
+    display: block;
+    margin-right: 50px;
+    margin-top: 7px;
+}
+
+#logo {
+    color: white;
+}
+
+#logo span{
+    font-weight: 700;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.title-alt {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* buttons */
+.btn-login {
+    width: 50%;
+    height: 25%;
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: #2F7EE6;
+    color: #fff;
+}
+
+.btn-delete {
+    width: 150px;
+    height: 30px;
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: #f00;
+    color: #fff;
+}
+
+.btn {
+    width: 150px;
+    height: 30px;
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: #2F7EE6;
+    color: #fff;
+}
+
+.btn-new {
+    display: block;
+    width: 160px;
+    height: 50px;
+    margin: 0;
+    padding: 5px 5px;
+    color: #fff;
+    background-color: #2F7EE6;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-out {
+    display: block;
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    background-color: #f00;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-edit {
+    display: block;
+    width: 50%;
+    height: 25px;
+    margin: 0;
+    padding: 5px 5px;
+    color: #fff;
+    background-color: #2F7EE6;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* login */
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    background: #2F7EE6;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-area {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* empresas */
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.empresas-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+table{
+    table-layout: fixed;
+    width: 97%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+thead th {
+    margin-top: 1rem;
+}
+
+thead th:nth-child(1) {
+    width: 5%;
+}
+
+thead th:nth-child(2) {
+    width: 15%;
+}
+
+thead th:nth-child(3) {
+    width: 20%;
+}
+
+thead th:nth-child(4) {
+    width: 55%;
+}
+
+thead th:nth-child(5) {
+    width: 5%;
+}
+
+.td-note {
+    max-width: 35ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+tbody td {
+    text-align: center;
+}
+
+/* empresa edit */
+
+.edit-emp .title {
+    text-align: center;
+}
+
+.edit-emp .form-edit{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.edit-emp input,textarea {
+    margin: 0.5rem;
+}
+
+.edit-emp input {
+    width: 50%;
+
+}
+
+.edit-emp textarea {
+    width: 50%;
+    height: 150px;
+}
+
+/* cadastro */
+.container .form-register{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container input,textarea {
+    margin: 0.5rem;
+}
+
+.container input {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.container textarea {
+    width: 50%;
+    height: 150px;
+}
+
+/* create user */
+.container .form-user{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* hidden */
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <h1><a id="logo" href="/empresas">smart<span>br</span></a></h1>
+        <a class="btn-out" href="/logout">Sair</a>
+    </nav>
+    <div class="container">
+        <header class="empresas-header">
+            <h2 class="title">Empresas Cadastradas</h2>
+            <div class="btns">
+                <a class="btn-new" href="/cadastro">Cadastrar Nova Empresa</a>
+            </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <!--<th>CNPJ</th><-->
+                    <th>Contato</th>
+                    <th>Anotações</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% empresas.forEach(empresa => { %> 
+                <tr>
+                    <td><%= empresa.id %> </td>
+                    <td><%= empresa.name %> </td>
+                    <!--<td><%=// empresa.cnpj %> </td><-->
+                    <td><%= empresa.contact %> </td>
+                    <td><%= empresa.note %> </td>
+                    <td class="td-note"><a class="btn-edit" href="/empresa/edit/<%=empresa.id%>">+</a</td>
+                </tr>
+                <% }) %> 
+            </tbody>
+        </table>
+    </div>
+    <p class="wellcome">Usuário Conectado: <%= username %> </p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Empresa</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <h1><a id="logo" href="/empresas">smart<span>br</span></a></h1>
+        <a class="btn-out" href="/logout">Sair</a>
+    </nav>
+    <div class="container edit-emp">
+        <h2 class="title-alt">Editar Empresa</h1>
+        <form class="form-edit" method="POST" action="/empresa/update">
+            <input type="hidden" name="id" value="<%= empresa.id %> ">
+            <label for="name">Empresa</label>
+            <input readonly type="text" id="name" name="name" placeholder="Nome Da Empresa" value="<%= empresa.name %>"><br>
+            <label for="cnpj">CNPJ</label>
+            <input readonly type="text" id="cnpj" name="cnpj" placeholder="CNPJ" value="<%= empresa.cnpj %>"><br>
+            <label for="contact">Contato</label>
+            <input type="text" id="contact" name="contact" placeholder="Contato" value="<%= empresa.contact %>"><br>
+            <label for="note">Anotações</label>
+            <textarea name="note" id="note" placeholder="Obervações" ><%= empresa.note %></textarea><br>
+            <input type="hidden" id="username" id="username" value="<%= username %> ">
+            <button onsubmit="nameUpdate()" class="btn" id="btn-edit">Editar</button>
+            
+            <!--<div id="name-update">
+
+            </div>-->
+        </form>
+        <form action="/empresa/delete" method="POST">
+            <input type="hidden" name="deleteId" value="<%= empresa.id %>">
+            <button class="btn-delete">Deletar</button>
+        </form>
+    </div>
+</body>
+<script>
+    /*let btn = document.getElementById('btn-edit')
+    btn.addEventListener('click', () => {
+        let msg = document.getElementById('name-update')
+        msg.innerHTML = `<p class="hidden" id="name-update">Última alteração feita por: <%= username %>.</p>`
+    })*/
+</script>
+</html>

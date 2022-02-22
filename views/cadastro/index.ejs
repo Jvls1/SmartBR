@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empresa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <h1><a id="logo" href="/empresas">smart<span>br</span></a></h1>
+        <a class="btn-out" href="/logout">Sair</a>
+    </nav>
+    <div class="container">
+        <h2 class="title-alt">Cadastro</h1>
+        <form class="form-register" method="POST" action="/cadastro/salvar">
+            <label for="name">Empresa</label>
+            <input required type="text" id="name" name="name" placeholder="Nome Da Empresa"><br>
+            <label for="cnpj">CNPJ</label>
+            <input required type="text" id="cnpj" name="cnpj" placeholder="CNPJ"><br>
+            <label for="contact">Contato</label>
+            <input required type="text" id="contact" name="contact" placeholder="Número para contato"><br>
+            <label for="note">Observações</label>
+            <textarea name="note" id="note" placeholder="Obervações"></textarea><br>
+            <input type="hidden" id="username" value="<%= username %> ">
+            <button class="btn">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
